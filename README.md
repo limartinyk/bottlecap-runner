@@ -2,6 +2,20 @@
 
 Connect your local LLMs to BottleCapAI.
 
+## Download
+
+Download the latest release from the [Releases page](https://github.com/limartinyk/bottlecap-runner/releases).
+
+### macOS
+
+After downloading, if you see **"BottleCapAI Runner is damaged and can't be opened"**, run this in Terminal:
+
+```bash
+xattr -cr /Applications/BottleCapAI\ Runner.app
+```
+
+This removes the quarantine flag that macOS adds to downloaded apps. The app is safe but not yet signed with an Apple Developer certificate.
+
 ## Prerequisites
 
 1. **Rust** - Install from [rustup.rs](https://rustup.rs)

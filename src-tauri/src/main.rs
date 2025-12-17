@@ -213,11 +213,8 @@ async fn connect_to_partykit(
         }
     }
 
-    // Get Partykit URL from environment or use default
-    let partykit_url = std::env::var("PARTYKIT_URL")
-        .unwrap_or_else(|_| "wss://bottlecap-runners.partykit.dev/party/main".to_string());
-
-    let ws_url = partykit_url.replace("https://", "wss://").replace("http://", "ws://");
+    // Partykit WebSocket URL
+    let ws_url = "wss://bottlecap-runners.limartinyk.partykit.dev/party/main".to_string();
 
     // Create cancel token
     let (cancel_tx, mut cancel_rx) = tokio::sync::oneshot::channel::<()>();
